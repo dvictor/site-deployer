@@ -1,0 +1,16 @@
+# /etc/systemd/system/site-deployer.service
+
+[Unit]
+Description=Site deployer service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=webadmin
+ExecStart=/home/webadmin/site-deployer
+WorkingDirectory=/home/webadmin/
+
+[Install]
+WantedBy=multi-user.target

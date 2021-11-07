@@ -1,0 +1,15 @@
+{
+  "server_address": "127.0.0.1:9000",
+  "sites": {
+    "site1": {
+      "path": "/var/www/site1",
+      "cmd": [
+        ["date"],
+        ["git", "status"],
+        ["git", "pull"],
+        ["git", "rev-parse", "--short","HEAD"],
+        ["echo", "DONE"]
+      ]
+    }
+  }
+}
