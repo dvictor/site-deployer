@@ -6,6 +6,17 @@ Mind the auth though!
 
 If you also need to restart a server, you might want to run this service as root.
 
+Start it
+```
+sudo systemctl start site-deployer
+```
+
+Enable autostart
+```
+sudo systemctl enable site-deployer
+```
+
+Check the logs
 ```
 sudo journalctl -u site-deployer
 ```
